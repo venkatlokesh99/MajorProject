@@ -34,8 +34,8 @@ Manage Subject
                       <th>Course Name</th>
                       <th>Course ID</th>
                       <th>Staff Name</th>
-                      <!-- <th colspan="2" style="text-align:center">Actions</th> -->
-                      <th>Action</th>
+                      <th colspan="2" style="text-align:center">Actions</th>
+                      <!-- <th>Action</th> -->
                     </tr>
                   </thead>
                   <tbody>
@@ -47,6 +47,7 @@ Manage Subject
                       <td>{{ subject.course_id.id }}</td>
                       <td>{{ subject.staff_id.username }}</td>
                       <td><a href="/edit_subject/{{ subject.id }}" class="btn btn-success">Edit</a></td>
+                      <td><a href="/delete_subject/{{ subject.id }}" class="btn btn-danger">Delete</a></td>
                     </tr>
                   {% endfor %}
                   </tbody>

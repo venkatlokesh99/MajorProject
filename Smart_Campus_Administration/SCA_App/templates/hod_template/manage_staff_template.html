@@ -31,8 +31,8 @@ Manage Staff
                       <th>Address</th>
                       <th>Last Login</th>
                       <th>Date Joined</th>
-                      <!-- <th colspan="2" style="text-align:center">Actions</th> -->
-                      <th>Action</th>
+                      <th colspan="2" style="text-align:center">Actions</th>
+                      <!-- <th>Action</th> -->
                     </tr>
                   </thead>
                   <tbody>
@@ -47,7 +47,7 @@ Manage Staff
                       <td>{{ staff.admin.last_login }}</td>
                       <td>{{ staff.admin.date_joined }}</td>
                       <td><a href="/edit_staff/{{ staff.admin.id }}" class="btn btn-success">Edit</a></td>
-                      <!-- <td><a href="/delete_staff/{{ staff.admin.id }}" class="btn btn-success">Delete</a></td> -->
+                      <td><a href="/delete_staff/{{ staff.admin.id }}" class="btn btn-danger">Delete</a></td>
                     </tr>
                   {% endfor %}
                   </tbody>

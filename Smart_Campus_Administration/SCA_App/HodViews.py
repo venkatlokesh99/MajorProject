@@ -200,11 +200,17 @@ def edit_staff(request,staff_id):
     staff=Staffs.objects.get(admin=staff_id)
     return render(request,"hod_template/edit_staff_template.html",{"staff":staff,"id":staff_id})
 
-# def delete_staff(request,staff_id):
-#     staff=Staffs.objects.get(admin=staff_id)
-#     staff.delete()
-#     staffs=Staffs.objects.all()
-#     return render(request,"hod_template/manage_staff_template.html",{"staffs":staffs})
+def delete_staff(request,staff_id):
+    staff=Staffs.objects.get(admin=staff_id)
+    staff.delete()
+    staffs=Staffs.objects.all()
+    return render(request,"hod_template/manage_staff_template.html",{"staffs":staffs})
+
+def delete_student(request,student_id):
+    student=Students.objects.get(admin=student_id)
+    student.delete()
+    students=Students.objects.all()
+    return render(request,"hod_template/manage_student_template.html",{"students":students})
 
 def edit_staff_save(request):
     if request.method!="POST":
